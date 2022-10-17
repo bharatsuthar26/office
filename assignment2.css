@@ -37,20 +37,7 @@ body{
     color:white ;
 }
 
- #header-left input {
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 50px;
-    background-color: black;
 
- }
- #header-left input[type=text] {
-    border: none;
-    color: white;
-    font-weight: bolder;
-
- }
  
 
  #header-right{
@@ -370,7 +357,8 @@ color: white;
         padding-top: 30px;
     }
     #big-text{
-        font-size: 50px;
+        font-size: 40px;
+        letter-spacing: 5px;
     }
 
     .paragraph{
@@ -382,7 +370,15 @@ color: white;
     .cards{
         display: flex;
         flex-direction: column;
+        
     }
+    .card1{
+        margin: 10px;
+    }
+    .photo{
+        text-align: center;
+    }
+    
 
     .feedback{
         display: flex;
@@ -445,6 +441,7 @@ color: white;
     }
     .fflex-right-upper{
         padding: 0px 20px 0px 20px;
+        
     }
 
 
