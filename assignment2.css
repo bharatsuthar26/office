@@ -90,8 +90,8 @@ body{
 
  }
 p.paragraph{
-font-size: 1.3rem;
-padding: 20px;
+font-size: 30px;
+padding-bottom: 10px;
 
 }
 
@@ -110,12 +110,12 @@ padding: 20px;
 }
 #green{
     background-color: greenyellow;
-    margin-right: 10px;
+    margin-right: 20px;
     
 }
 #blue{
     background-color: dodgerblue;
-    margin-left: 10px;
+    margin-left: 20px;
 
 
 }
@@ -306,7 +306,7 @@ color: white;
 
 
 
-  @media screen and (max-width:400px){
+  @media screen and (max-width:410px){
     .main{
         width: 100%;
     }
@@ -364,8 +364,10 @@ color: white;
         padding-top: 27%;
     }
 
-    .paragraph{
-        font-size: 25px;
+    p.paragraph{
+        font-size: 1.3rem;
+        padding: 20px;
+
     }
 
 
