@@ -361,6 +361,7 @@ color: white;
     #big-text{
         font-size: 40px;
         letter-spacing: 5px;
+        padding-top: 27%;
     }
 
     .paragraph{
@@ -377,8 +378,23 @@ color: white;
     .card1{
         margin: 10px;
     }
+    
+    #c1{
+        width: 80%;
+    }
+    
+    #c2{
+        width: 80%;
+    }
+    
+    #c3{
+        width: 80%;
+    }
+
     .photo{
         text-align: center;
+        width: auto;
+    
     }
     
 
@@ -388,7 +404,10 @@ color: white;
         
     }
     .data{
-        padding-bottom: 30px;
+        padding: 10px;
+    }
+    .inner-data h3{
+        font-size: 1rem;
     }
 
     .logo-container {
