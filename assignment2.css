@@ -89,9 +89,9 @@ body{
     
 
  }
-.paragraph{
-font-size: 30px;
-padding-bottom: 10px;
+p.paragraph{
+font-size: 1.3rem;
+padding: 10px;
 
 }
 
@@ -110,12 +110,12 @@ padding-bottom: 10px;
 }
 #green{
     background-color: greenyellow;
-    margin-right: 20px;
+    margin-right: 10px;
     
 }
 #blue{
     background-color: dodgerblue;
-    margin-left: 20px;
+    margin-left: 10px;
 
 
 }
