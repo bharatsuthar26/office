@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h2>Task 1</h2>
+    <script>
+       var sub1= parseInt(prompt("Enter marks of subject 1"));
+       var sub2= parseInt(prompt("Enter marks of subject 2"));
+       var sub3= parseInt(prompt("Enter marks of subject 3"));
+       var sub4= parseInt(prompt("Enter marks of subject 4"));
+       var sub5= parseInt(prompt("Enter marks of subject 5"));
+
+        var total= sub1+sub2+sub3+sub4+sub5;
+        
+        var per= (total/100)*5;
+        if(per>80){
+            alert("Total is " +total+ "percentage is " +per+ "grade is A");
+        }
+        else if(per>60 && per<=80){
+            alert("Total is " +total+ "percentage is " +per+ "grade is B");
+
+        }
+        else if(per>45 && per<=60){
+            alert("Total is " +total+ "percentage is " +per+ "grade is C");
+
+        }
+        else{
+            alert("Fail");
+
+        }
+
+        
+        
+
+
+    </script>
+</body>
+</html>
