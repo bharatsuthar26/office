@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style></style>
+  </head>
+  <body id="background" bgcolor="red">
+    <h2>color changer</h2>
+    <p id="bh"></p>
+    <h3 id="bha" style="text-align: center; font-size: 70px; "></h3>
+
+    <script type="text/javascript">
+        
+      var doc = document.getElementById("background");
+    
+
+
+      var color = ["red", "green", "yellow", "pink", "orange"];
+      var i = 0;
+      function change() {
+        doc.style.backgroundColor = color[i];
+        var doc1= document.getElementById("bh").innerHTML=color[i];
+        var doc2= document.getElementById("bha").innerHTML="Happy Diwali";
+
+        i++;
+
+        if (i > color.length - 1) {
+          i = 0;
+        }
+      }
+      setInterval(change, 200);
+    </script>
+  </body>
+</html>
