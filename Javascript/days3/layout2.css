@@ -1,0 +1,72 @@
+
+.carousel-text h2 {
+
+font-size: 60px;
+color: yellow;
+font-style: italic;
+font-weight:bolder;
+
+
+}
+.nav-item{
+    padding: 0px 20px;
+}
+.main{
+    padding: 0px 20px 0px 20px;
+}
+
+.nav-last i{
+padding-left:40px;
+cursor: pointer;
+}
+
+.carousel-text p{
+    font-size: 25px;
+    color: rgb(29, 206, 53);
+    font-style: italic;
+    font-weight:bolder;
+}
+.carousel-text a{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+
+}
+.row1{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    
+
+}
+.pcolor{
+    color: red;
+}
+
+.button1 a{
+    padding: 20px 100px;
+    color: white;
+    background-color: dodgerblue;
+    text-align: center;
+    
+    text-decoration: none;
+}
+.button2 a{
+    padding: 20px 100px;
+    color: white;
+    background-color: rgb(235, 89, 31);
+    text-align: center;
+
+    text-decoration: none;
+}
+.button3 a{
+    padding: 20px 100px;
+    color: white;
+    background-color: rgb(231, 228, 26);
+    text-align: center;
+    text-decoration: none;
+}
+
