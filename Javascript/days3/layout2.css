@@ -70,3 +70,9 @@ cursor: pointer;
     text-decoration: none;
 }
 
+
+.first-overflow{
+    overflow-y: scroll; 
+    height: 400px;
+}
+
