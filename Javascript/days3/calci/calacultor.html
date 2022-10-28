@@ -1,0 +1,86 @@
+<html lang="en"><head>
+    <link rel="stylesheet" href="cal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  </head>
+  <body>
+  <div class="main1">
+  <div class="b">
+    <div class="out">
+        <input type="textarea" id="num" placeholder="CASIO&copy;">
+    </div>
+    <div class="main">
+      
+        <div class="cell"><button type="button" id ="b1" onclick="CLEAR();">c</button></div>
+        <div class="cell"><button type="button" onclick="remove();">del</div>
+        <div class="cell"><button type="button" onclick="openPopup();"><i class="fa fa-history" aria-hidden="true"></i></button></div>
+        <div class="cell"><button type="button" onclick="number('/');">/</button></div>
+        <div class="cell"><button type="button" onclick="number('7');">7</button></div>
+        <div class="cell"><button type="button" onclick="number('8');">8</button></div>
+        <div class="cell"><button type="button" onclick="number('9');">9</button></div>
+        <div class="cell"><button type="button" onclick="number('*');">X</button></div>
+        <div class="cell"><button type="button" onclick="number('4');">4</button></div>
+        <div class="cell"><button type="button" onclick="number('5');">5</button></div>
+        <div class="cell"><button type="button" onclick="number('6');">6</button></div>
+        <div class="cell"><button type="button" onclick="number('-');">-</button></div>
+       <div class="cell"> <button type="button" onclick="number('1');">1</button></div>
+      <div class="cell"><button type="button" onclick="number('2');">2</button> </div>
+      <div class="cell"><button type="button" onclick="number('3');">3</button></div>
+     <div class="cell"><button type="button" onclick="number('+');">+</button></div>
+     <div class="cell"><button type="button" onclick="number('%');">%</button></div>
+     <div class="cell"><button type="button" onclick="number('0');">0</button></div>
+     <div class="cell"><button type="button" onclick="result('=');">=</button></div>
+     <div class="cell"><button type="button" onclick="number('.');">.
+    </button></div>
+  </div>
+  
+  </div>
+  <div class="history" id="history">
+  <h1>History</h1>
+  <input type="textarea" id="num1">
+  
+  <div class="cell1 close"><button1 type="button" onclick="closePopup();"><i class="fa fa-close" style="font-size:24px"></i></button1></div>
+  </div>   
+    </div>
+    <script>
+          function number(num) {
+            var val= document.getElementById("num");
+           val.value += num
+            var val2=document.getElementById("num1")
+            val2.value=val.value
+          } 
+          function result(num) {
+            var result= document.getElementById("num");
+           var res=result.value = eval(result.value);
+           var val2=document.getElementById("num1")
+            val2.value+=num+res
+        
+          } 
+          function CLEAR() {
+            var res1= document.getElementById("num");
+           res1.value ="";
+          } 
+        function remove(){
+          var number =document.getElementById("num");
+         var remove=number.value;
+         remove=remove.slice(0,-1); ///remove last char from string
+         number.value=remove;
+        }
+        </script>
+  <script>
+    let history=document.getElementById("history");
+    function openPopup(){
+    history.classList.add("open-popup");
+  
+    }
+    function closePopup(){
+    history.classList.remove("open-popup");
+    }
+  </script>
+  
+  </body>
+  </html>
