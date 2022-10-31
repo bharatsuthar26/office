@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom1</title>
+</head>
+<body>
+    <h2>Get Element by id example</h2>
+   
+ <p id="target">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, corporis! Atque officia ut velit, eum illo voluptatum doloribus voluptatem eligendi blanditiis et error. Et, neque esse quasi rem quae inventore!</p>
+<button id="btn">Click Here</button>
+<script>
+    var b = document.getElementById("btn");
+    b.addEventListener("click",function(){
+        var para= document.getElementById("target")
+        var data= para.innerHTML;
+        alert(data);
+    });
+</script>
+</body>
+</html>
