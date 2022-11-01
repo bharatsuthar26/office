@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      table {
+        border-top: 1px solid black;
+        box-shadow: 34px 37px 188px -13px grey;
+      }
+
+      td {
+        border-bottom: 1px solid black;
+      }
+      div#form {
+        justify-content: center;
+        align-items: center;
+        margin: 190px;
+      }
+      button#btn {
+        border-radius: 36px;
+        border: 2px;
+        margin: 10px;
+        width: 113px;
+        background: #2196f3;
+        color: white;
+        font-size: 27px;
+      }
+      .democlass {
+        background: #e62a2a;
+        margin-left: 90px;
+      }
+
+      div#input {
+        margin-bottom: 10px;
+      }
+      body {
+        margin-left: 344px;
+        padding-left: -25px;
+        border-radius: 10;
+        border-radius: 40px;
+        border: 3px solid #9e9e9e;
+        margin-right: 482px;
+        box-shadow: 10px 20px 73px;
+      }
+
+      #form {
+        display: flex;
+        flex-direction: column;
+        
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Dom1</title>
+  </head>
+  <body>
+    <div id="form">
+        <h2>Registration Form</h2>
+      <div id="input">
+        Full name:
+        <input type="text" id="name" placeholder="enter name" />
+      </div>
+      <div id="input">
+        Age:
+        <input type="text" id="age" placeholder="enter age" />
+      </div>
+      <div id="input">
+        Email:
+        <input type="text" id="email" placeholder="enter email" />
+      </div>
+      <div id="input">
+        Mobile no:
+        <input type="text" id="mobile" placeholder="enter mobile" />
+      </div>
+      <div id="input">
+        <button id="btn">submit</button>
+      </div>
+      <div id="input">
+        <button id="add" onclick="add()">add</button>
+      </div>
+      <div id="table">
+        <table id="myTable"></table>
+      </div>
+    </div>
+
+    <script>
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        var name = document.getElementById("name");
+        var age = document.getElementById("age");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("mobile");
+
+        var regname = /^[a-zA-Z][a-zA-Z\s]+$/;
+        var regage = /^[0-9]+$/;
+        var regemail = /\S+@\S+\.\S+/;
+        var regphone = /^\d{10}$/;
+        if (name.value.match(regname)) {
+          btn.style.background = "green";
+          alert("name:" + name.value);
+        } else {
+          btn.style.background = "red";
+          alert("Please enter letters and space only.");
+
+          return false;
+        }
+        if (age.value.match(regage)) {
+          btn.style.background = "green";
+          alert("Age:" + age.value);
+        } else {
+          btn.style.background = "red";
+          alert("Please enter Number only.");
+          return false;
+        }
+        if (email.value.match(regemail)) {
+          btn.style.background = "green";
+          
+          alert("Email:" + email.value);
+        } else {
+          btn.style.background = "red";
+          alert("Please enter valid mailid example: john@gmail.com");
+          return false;
+        }
+        if (phone.value.match(regphone)) {
+          btn.style.background = "green";
+          alert("phone:" + phone.value);
+        } else {
+          btn.style.background = "red";
+          alert("Please enter valid phone number");
+
+          return false;
+        }
+        if (
+          name.value.match(regname) &&
+          age.value.match(regage) &&
+          email.value.match(regemail) &&
+          phone.value.match(regphone)
+        ) {
+          alert("successfully data saved");
+        } else {
+          alert("not correct data");
+        }
+      });
+      function add() {
+        var name = document.getElementById("name");
+        var age = document.getElementById("age");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("mobile");
+
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = name.value;
+        cell2.innerHTML = age.value;
+        cell3.innerHTML = email.value;
+        cell4.innerHTML = phone.value;
+      }
+    </script>
+  </body>
+</html>
